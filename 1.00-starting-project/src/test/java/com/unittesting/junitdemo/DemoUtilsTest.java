@@ -1,5 +1,6 @@
 package com.unittesting.junitdemo;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,11 @@ class DemoUtilsTest {
     void setupBeforeEach() {
         demoUtils = new DemoUtils();
         System.out.println("@BeforeEach executes before the execution of each test method");
+    }
+
+    @AfterEach
+    void tearDownAfterEach() {
+        System.out.println("Running @AfterEach\n");
     }
 
     @Test
