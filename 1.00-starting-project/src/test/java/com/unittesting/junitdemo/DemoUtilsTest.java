@@ -14,4 +14,13 @@ class DemoUtilsTest {
         assertEquals(6, demoUtils.add(2, 4), "2+4 must be equal 6");
         assertNotEquals(7, demoUtils.add(1, 9), "1+9 must be not equal 7");
     }
+
+    @Test
+    @DisplayName("Check null")
+    void testNullAndNotNull() {
+
+        DemoUtils demoUtils = new DemoUtils();
+        assertNull(demoUtils.checkNull(null), "Object should be null");
+        assertNotNull(demoUtils.checkNull("junit"), "Object should not be null");
+    }
 }
