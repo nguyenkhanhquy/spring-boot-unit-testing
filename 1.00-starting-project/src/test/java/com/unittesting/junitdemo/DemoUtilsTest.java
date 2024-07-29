@@ -20,8 +20,13 @@ class DemoUtilsTest {
     }
 
     @BeforeAll
-    static void setupBeforeEachClass() {
+    static void setupBeforeAll() {
         System.out.println("@BeforeAll executes only once before all test methods execution in the class\n");
+    }
+
+    @AfterAll
+    static void tearDownAfterAll() {
+        System.out.println("@AfterAll executes only once after all test methods execution in the class");
     }
 
     @Test
