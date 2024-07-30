@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
 class DemoUtilsTest {
 
     DemoUtils demoUtils;
@@ -30,7 +31,7 @@ class DemoUtilsTest {
     }
 
     @Test
-    @DisplayName("Add two numbers")
+    // @DisplayName("Equals And Not Equals")
     void testEqualsAndNotEquals() {
         System.out.println("Running test: testEqualsAndNotEquals");
         // No need to create object ... handled by @BeforeEach
@@ -39,7 +40,7 @@ class DemoUtilsTest {
     }
 
     @Test
-    @DisplayName("Check null")
+    @DisplayName("Null And Not Null")
     void testNullAndNotNull() {
         System.out.println("Running test: testNullAndNotNull");
         // No need to create object ... handled by @BeforeEach
